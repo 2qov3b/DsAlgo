@@ -34,24 +34,7 @@ Text summarization is the process of distilling the most important information f
 
 ```python
 text = """
-Beautiful Soup, so rich and green,
-Waiting in a hot tureen!
-Who for such dainties would not stoop?
-Soup of the evening, beautiful Soup!
-Soup of the evening, beautiful Soup!
-Beau--ootiful Soo--oop!
-Beau--ootiful Soo--oop!
-Soo--oop of the e--e--evening,
-Beautiful, beautiful Soup!
-Beautiful Soup! Who cares for fish,
-Game or any other dish?
-Who would not give all else for two
-Pennyworth only of Beautiful Soup?
-Pennyworth only of beautiful Soup?
-Beau--ootiful Soo--oop!
-Beau--ootiful Soo--oop!
-Soo--oop of the e--e--evening,
-Beautiful, beauti--FUL SOUP!
+# News, articles,...,etc..
 """
 ```
 
@@ -94,5 +77,22 @@ for word in word_frequencies.keys():
 ```python
 sentence_tokens = [sent for sent in doc.sents]
 #print(sentence_tokens)
+
+sentence_scores = {}
+for sent in sentence_tokens:
+  for word in sent:
+    if word.text.lower() in word_frequencies.keys():
+      if sent not in sentence_scores.keys():
+        sentence_scores[sent] = word_frequencies[word.text.lower()]
+      else:
+        sentence_scores[sent] += word_frequencies[word.text.lower()]
+#print(sentence_scores)
 ```
-     
+```python
+from heapq import nlargest
+
+select_length = int(len(sentence_tokens)*0.3) # 30%
+summary = nlargest(select_length, sentence_scores, key = sentence_scores.get)
+final_summary = [word.text for word in summary]
+summary = ' '.join(final_summary)
+```     
