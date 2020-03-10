@@ -18,4 +18,37 @@ abs(x, /)
 ```
 
 # Syntax
+Python has `no mandatory statement termination characters` and `blocks are specified by indentation`. Indent to begin a block, dedent to end one. Statements that expect an indentation level end in a colon `:`. Comments start with the pound `#` sign and are single-line, multi-line strings are used for *multi-line comments*. Values are assigned (in fact, *objects are bound to names*) with the equals sign `=`, and *equality testing* is done using two equals signs `==`. You can increment/decrement values using the `+=` and `-=` operators respectively by the right-hand amount. This works on many datatypes, strings included. You can also use multiple variables on one line. For example:
+```python
+>>> var = 3
+>>> var += 2
+>>> var
+5
 
+>>> var -= 1
+>>> var
+4
+
+>>> """This is a multiline comment.
+... The following lines concatenate the two strings."""
+'This is a multiline comment.\nThe following lines concatenate the two strings.'
+
+>>> str = "Hello"
+>>> str += " World!"
+>>> str
+'Hello World!'
+>>> print(str)
+Hello World!
+
+# This swaps the variables in one line.
+# It doesn't violate strong typing because values aren't
+# actually being assigned, but new objects are bound to
+# the old names.
+>>> var, str
+(4, 'Hello World!')
+>>> var, str = str, var
+>>> var, str
+('Hello World!', 4)
+```
+
+# Data types
