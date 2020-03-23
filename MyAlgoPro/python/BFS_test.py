@@ -41,45 +41,48 @@ test5.children[4].children[0].children[1].addChild("Y").addChild("Z")
 
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
-        self.assertEqual(test1.depthFirstSearch([]), ["A", "B", "D", "C"])
+        self.assertEqual(test1.breadthFirstSearch([]), ["A", "B", "C", "D"])
 
     def test_case_2(self):
-        self.assertEqual(test2.depthFirstSearch([]), ["A", "B", "C", "F", "D", "E"])
+        self.assertEqual(test2.breadthFirstSearch([]), [
+                         "A", "B", "C", "D", "E", "F"])
 
     def test_case_3(self):
-        self.assertEqual(test3.depthFirstSearch([]), ["A", "B", "C", "D", "F", "E"])
+        self.assertEqual(test3.breadthFirstSearch([]), [
+                         "A", "B", "C", "D", "E", "F"])
 
     def test_case_4(self):
-        self.assertEqual(test4.depthFirstSearch([]), ["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"])
+        self.assertEqual(test4.breadthFirstSearch(
+            []), ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"])
 
     def test_case_5(self):
         self.assertEqual(
-            test5.depthFirstSearch([]),
+            test5.breadthFirstSearch([]),
             [
                 "A",
                 "B",
-                "E",
-                "Q",
-                "R",
-                "F",
-                "I",
-                "J",
-                "O",
                 "C",
-                "P",
                 "D",
-                "G",
-                "K",
-                "H",
                 "L",
                 "M",
+                "E",
+                "F",
+                "O",
+                "P",
+                "G",
+                "H",
                 "S",
+                "T",
+                "U",
+                "V",
+                "Q",
+                "R",
+                "I",
+                "J",
+                "K",
                 "W",
                 "X",
                 "Y",
                 "Z",
-                "T",
-                "U",
-                "V",
             ],
         )
