@@ -10,8 +10,8 @@ def sortedSquaredArray1(array):
 	return 	sortedSquares			 
 
 # O(n) time / O(n) space
-def sortedSquaredArray2(array):
-  sortedSquares = [0 for _ in array]
+def sortedSquaredArray(array):
+    sortedSquares = [0 for _ in array]
 	smallerIdx = 0
 	largerIdx = len(array) - 1
 	
@@ -19,7 +19,7 @@ def sortedSquaredArray2(array):
 		smallValue = array[smallerIdx]
 		largeValue = array[largerIdx]
 		
-    if abs(array[smallerIdx]) < abs(array[largerIdx]):
+        if abs(array[smallerIdx]) < abs(array[largerIdx]):
 			sortedSquares[idx] = largeValue * largeValue
 			largerIdx -= 1
 		else:
