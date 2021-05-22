@@ -1,6 +1,6 @@
 # O(n) time / O(1) space - where n is the length of the array
 def isValidSubsequence1(array, sequence):
-    arrIdx = 0
+	arrIdx = 0
 	seqIdx = 0
 	while arrIdx < len(array) and seqIdx < len(sequence):
 		if array[arrIdx] == sequence[seqIdx]:
@@ -10,7 +10,7 @@ def isValidSubsequence1(array, sequence):
 
 # O(n) time / O(1) space - where n is the length of the array
 def isValidSubsequence2(array, sequence):
-    seqIdx = 0
+	seqIdx = 0
 	for value in array:
 		if seqIdx == len(sequence):
 			break

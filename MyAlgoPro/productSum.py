@@ -1,6 +1,6 @@
 # O(n) time / O(d) space - where n is the # of idx in the array, d is the greatest depth of array
 def productSum(array, multiplier = 1):
-  sum = 0
+	sum = 0
 	for idx in array:
 		if type(idx) == list:
 			sum += productSum(idx, multiplier + 1)

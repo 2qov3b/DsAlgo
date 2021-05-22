@@ -5,18 +5,18 @@ class LinkedList:
 
 # O(n) time / O(1) space - where n is the # of nodes in the LinkedList
 def removeDuplicatesFromLinkedList(linkedList):
-  currentNode = linkedList
+    currentNode = linkedList
 	
-	while currentNode is not None:
-		nextNode = currentNode.next
+    while currentNode is not None:
+	    nextNode = currentNode.next
 		
-		while nextNode is not None and nextNode.value == currentNode.value:
-			nextNode = nextNode.next
+	    while nextNode is not None and nextNode.value == currentNode.value:
+		    nextNode = nextNode.next
 
-		currentNode.next = nextNode
-		currentNode = nextNode
+	    currentNode.next = nextNode
+	    currentNode = nextNode
 	
-	return linkedList
+    return linkedList
 
 
 

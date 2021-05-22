@@ -1,6 +1,6 @@
 # O(n) time / O(1) space
 def findThreeLargestNumbers(array):
-  topThreeArray = [None, None, None]
+	topThreeArray = [None, None, None]
 	for num in array:
 		sortHelper(topThreeArray, num)
 	return topThreeArray	
@@ -11,7 +11,7 @@ def sortHelper(topThreeArray, num):
 	elif topThreeArray[1] is None or num > topThreeArray[1]:
 		updateHelper(topThreeArray, num, 1)
 	elif topThreeArray[0] is None or num > topThreeArray[0]:	
-        updateHelper(topThreeArray, num, 0)
+		updateHelper(topThreeArray, num, 0)
 		
 def updateHelper(array, num, idx):
 	for i in range(idx + 1):

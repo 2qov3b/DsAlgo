@@ -3,18 +3,18 @@ def binarySearch(array, target):
 
 # O(log(n)) time / O(log(n)) space  
 def binarySearchHelper1(array, target, left, right):
-    if left > right:
-	    return -1
-	
-	  middle = (left + right) // 2
-	  tempvalue = array[middle]
-	
-	  if target == tempvalue:
-		  return middle
-	  elif target < tempvalue:
-		  return binarySearchHelper(array, target, left, middle - 1)
-	  else:
-	    return binarySearchHelper(array, target, middle + 1, right)
+	if left > right:
+		return -1
+		
+	middle = (left + right) // 2
+	tempvalue = array[middle]
+
+	if target == tempvalue:
+		return middle
+	elif target < tempvalue:
+		return binarySearchHelper(array, target, left, middle - 1)
+	else:
+		return binarySearchHelper(array, target, middle + 1, right)
     
     
 # O(log(n)) time / O(1) space    
@@ -29,7 +29,7 @@ def binarySearchHelper2(array, target, left, right):
 	    	right = middle -1
 	    else:
 	        left = middle + 1
-	  return -1        
+		return -1        
 	
   
 ##############################################################################

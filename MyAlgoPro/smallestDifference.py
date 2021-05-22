@@ -1,6 +1,6 @@
 # O(nlog(n) + mlog(m)) time / O(1) space
 def smallestDifference(arrayOne, arrayTwo):
-  arrayOne.sort()
+	arrayOne.sort()
 	arrayTwo.sort()
 	idxOne = 0
 	idxTwo = 0

@@ -1,6 +1,6 @@
 # O(n) time / O(n) space
 def caesarCipherEncryptor(string, key):
-  newLetters = []
+	newLetters = []
 	newKey = key % 26
 	for letter in string:
 		newLetters.append(getNewLetter(letter, newKey))

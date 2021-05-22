@@ -1,8 +1,8 @@
 # O(n) time / O(n) space - where n is the # of nodes in the Binary Tree
 def branchSums(root):
-  sums = []
-	branchSumsHelper(root, 0, sums)
-	return sums
+    sums = []
+    branchSumsHelper(root, 0, sums)
+    return sums
 
 def branchSumsHelper(node, runningSum, sums):
 	if node is None:

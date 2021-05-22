@@ -2,14 +2,14 @@
 def tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest):
 	if fastest:
 		redShirtSpeeds.sort(reverse=True)
-	  blueShirtSpeeds.sort()
+	  	blueShirtSpeeds.sort()
 		maxSpeed = 0
 		for idx in range(len(redShirtSpeeds)):
 			maxSpeed += max(redShirtSpeeds[idx], blueShirtSpeeds[idx])
 		return maxSpeed
 	else:
 		redShirtSpeeds.sort()
-	  blueShirtSpeeds.sort()
+	  	blueShirtSpeeds.sort()
 		minSpeed = 0
 		for idx in range(len(redShirtSpeeds)):
 			minSpeed += max(redShirtSpeeds[idx], blueShirtSpeeds[idx])

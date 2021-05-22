@@ -1,6 +1,6 @@
 # O(n^2) time / O(n) space
 def threeNumberSum(array, targetSum):
-    array.sort()
+	array.sort()
 	triplets = []
 	for i in range(len(array) - 2):
 		left = i + 1
@@ -8,12 +8,12 @@ def threeNumberSum(array, targetSum):
 		
 		while left < right:
 			threeSum = array[i] + array[left] + array[right]
-		    if threeSum == targetSum:
-			    triplets.append([array[i], array[left], array[right]])
+			if threeSum == targetSum:
+				triplets.append([array[i], array[left], array[right]])
 				left += 1
-		    elif threeSum < targetSum:
+			elif threeSum < targetSum:
 			    left += 1
-		    elif threeSum > targetSum:
+			elif threeSum > targetSum:
 			    right -= 1
 				
 	return triplets	

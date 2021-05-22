@@ -16,9 +16,9 @@ def nodeDepths1(root):
 
 # O(n) time / O(h) space - where n is the # of nodes; h is the height of tree.
 def nodeDepths2(root, depth = 0):
-	if root is None:
-		return 0
-  return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
+    if root is None:
+	    return 0
+    return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
     
 
 

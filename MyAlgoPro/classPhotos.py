@@ -1,6 +1,6 @@
 # O(nlogn) time / O(1) space
 def classPhotos(redShirtHeights, blueShirtHeights):
-  redShirtHeights.sort(reverse=True)
+	redShirtHeights.sort(reverse=True)
 	blueShirtHeights.sort(reverse=True)
 	
 	firstRowShirt = 'RED' if redShirtHeights[0] < blueShirtHeights[0] else 'BLUE'
